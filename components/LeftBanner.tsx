@@ -15,7 +15,7 @@ const LeftBanner = () => {
       <div className="flex flex-col gap-5">
         <h4 className=" text-lg font-normal">WELCOME TO MY WORLD</h4>
         <h1 className="text-6xl font-bold ">
-          Hi, I'm{" "}
+          Hi, I&apos;m{" "}
           <span className="text-designColor capitalize text-primary">
             Soumya
           </span>
@@ -31,7 +31,7 @@ const LeftBanner = () => {
         <p className="text-justify text-base leading-6 tracking-wide text-gray-500">
           A dedicated software developer with a passion for crafting innovative
           solutions. With expertise in web development, I thrive on challenges
-          and enjoy turning ideas into reality through code. Let's create
+          and enjoy turning ideas into reality through code. Let&apos;s create
           something remarkable together.
         </p>
       </div>
