@@ -11,16 +11,16 @@ const LeftBanner = () => {
     delaySpeed: 2000,
   });
   return (
-    <div className="lgl:w-1/2 flex w-full flex-col gap-20">
+    <div className="lgl:w-1/2 flex w-full flex-col gap-20 pt-20 md:pt-0">
       <div className="flex flex-col gap-5">
         <h4 className=" text-lg font-normal">WELCOME TO MY WORLD</h4>
-        <h1 className="text-6xl font-bold ">
+        <h1 className="text-4xl font-bold md:text-6xl ">
           Hi, I&apos;m{" "}
           <span className="text-designColor capitalize text-primary">
             Soumya
           </span>
         </h1>
-        <h2 className="text-4xl font-bold ">
+        <h2 className="Md:text-4xl text-2xl font-bold ">
           a <span>{text}</span>
           <Cursor
             cursorBlinking={false}

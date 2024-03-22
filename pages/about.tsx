@@ -8,40 +8,40 @@ export default function about() {
   return (
     <>
       <Head>
-        <title>Mozorozov | About</title>
+        <title>Soumya ranjan dash | About</title>
       </Head>
       <Wrapper pageIndex={2}>
-        <div className="flex flex-col gap-12 lg:flex-row items-center justify-center mb-12 min-h-screen lg:mb-0 pt-28 lg:pt-0">
+        <div className="mb-12 flex min-h-screen flex-col items-center justify-center gap-12 pt-28 lg:mb-0 lg:flex-row lg:pt-0">
           <Image
             src={"/about.jpg"}
             width={300}
             height={300}
             alt={"about image"}
           />
-          <div className="lg:w-1/2 lg:ml-8 max-w-md md:max-w-xl">
-            <div className="uppercase font-semibold text-sm text-WhiteGray">
+          <div className="max-w-md md:max-w-xl lg:ml-8 lg:w-1/2">
+            <div className="text-WhiteGray text-sm font-semibold uppercase">
               - Introduction
             </div>
-            <div className="font-semibold text-3xl mt-8 text-White uppercase">
+            <div className="text-White mt-8 text-3xl font-semibold uppercase">
               UI/UX Designer & FrontEnd Developer, based on California
             </div>
-            <p className="text-WhiteGray text-sm mt-8 leading-7">
+            <p className="text-WhiteGray mt-8 text-sm leading-7">
               {" "}
               I am a passionate frontend developer with a creative eye for
               design and a strong focus on delivering elegant and intuitive
               interfaces. Excited to collaborate on new projects!
             </p>
-            <div className="flex gap-8 mt-8">
+            <div className="mt-8 flex gap-8">
               <Link
                 href="/contact"
-                className="text-Orange font-semibold text-sm uppercase hover:underline"
+                className="text-Orange text-sm font-semibold uppercase hover:underline"
               >
                 Contact Me
               </Link>
               <a
                 href="/pdf/resume.pdf"
                 download
-                className="text-Orange font-semibold text-sm uppercase hover:underline"
+                className="text-Orange text-sm font-semibold uppercase hover:underline"
               >
                 Resume
               </a>

@@ -9,17 +9,17 @@ export default function contact() {
   return (
     <>
       <Head>
-        <title>Mozorozov | Contact</title>
+        <title>Soumya ranjan dash | Contact</title>
       </Head>
       <Wrapper
         pageIndex={4}
-        className="flex flex-col items-center justify-center gap-12 pt-28 text-White lg:flex-row lg:pt-0"
+        className="text-White flex flex-col items-center justify-center gap-12 pt-28 lg:flex-row lg:pt-0"
       >
         <div className="py-6 text-center md:px-6">
           <div className="text-3xl font-semibold uppercase tracking-wide md:text-4xl md:tracking-widest">
             Contact
           </div>
-          <p className="mb-8 mt-10 max-w-xl text-sm leading-8 text-WhiteGray">
+          <p className="text-WhiteGray mb-8 mt-10 max-w-xl text-sm leading-8">
             If you&apos;re looking for a skilled frontend developer to help
             bring your web application ideas to life, feel free to contact me.
             Let&apos;s discuss how I can contribute to your team and deliver
@@ -29,7 +29,7 @@ export default function contact() {
             {contacts.map((contact) => (
               <div className="mt-6" key={contact.id}>
                 <div className="mb-2 text-xl font-medium">{contact.title}</div>
-                <div className="text-sm text-WhiteGray">{contact.text}</div>
+                <div className="text-WhiteGray text-sm">{contact.text}</div>
               </div>
             ))}
           </div>
@@ -39,31 +39,31 @@ export default function contact() {
             Contact Form
           </div>
           <form onSubmit={submitHandler}>
-            <div className="mb-8 flex items-center border-b border-White py-2">
+            <div className="border-White mb-8 flex items-center border-b py-2">
               <input
                 type="text"
-                className=" mr-3 w-full appearance-none border-none bg-transparent px-2 py-1 leading-tight text-White focus:outline-none"
+                className=" text-White mr-3 w-full appearance-none border-none bg-transparent px-2 py-1 leading-tight focus:outline-none"
                 placeholder="Name"
               />
             </div>
-            <div className="mb-8 flex items-center border-b border-White py-2">
+            <div className="border-White mb-8 flex items-center border-b py-2">
               <input
                 type="text"
-                className=" mr-3 w-full appearance-none border-none bg-transparent px-2 py-1 leading-tight text-White focus:outline-none"
+                className=" text-White mr-3 w-full appearance-none border-none bg-transparent px-2 py-1 leading-tight focus:outline-none"
                 placeholder="Phone"
               />
             </div>
-            <div className="mb-8 flex items-center border-b border-White py-2">
+            <div className="border-White mb-8 flex items-center border-b py-2">
               <input
                 type="email"
-                className=" mr-3 w-full appearance-none border-none bg-transparent px-2 py-1 leading-tight text-White focus:outline-none"
+                className=" text-White mr-3 w-full appearance-none border-none bg-transparent px-2 py-1 leading-tight focus:outline-none"
                 placeholder="Email"
               />
             </div>
-            <div className="mb-8 flex items-center border-b border-White py-2">
+            <div className="border-White mb-8 flex items-center border-b py-2">
               <input
                 type="text"
-                className=" mr-3 w-full appearance-none border-none bg-transparent px-2 py-1 leading-tight text-White focus:outline-none"
+                className=" text-White mr-3 w-full appearance-none border-none bg-transparent px-2 py-1 leading-tight focus:outline-none"
                 placeholder="Message"
               />
             </div>

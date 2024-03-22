@@ -62,14 +62,15 @@ const social = [
     id: 2,
     icon: <FaLinkedinIn className="text-xl" />,
     tooltip: "Schedule a call",
+    link: "http://linkedin.com/in/soumya-ranjan-dash-2759061a7",
   },
   {
     id: 3,
     icon: <FaGithub className="text-xl" />,
     tooltip: "Send email",
-    link: "/admin/saved-templates",
+    link: "https://github.com/Soumya-Dash0708",
   },
-  { id: 4, icon: <FaFacebookF className="text-xl" />, tooltip: "Add notes" },
+  // { id: 4, icon: <FaFacebookF className="text-xl" />, tooltip: "Add notes",  link: "https://github.com/Soumya-Dash0708", },
 ];
 
 const skill = [

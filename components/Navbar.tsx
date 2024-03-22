@@ -9,6 +9,7 @@ import {
   AiFillTwitterCircle,
 } from "react-icons/ai";
 import { useEffect, useState } from "react";
+
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [navScroll, setNavScroll] = useState<boolean>(false);
@@ -21,34 +22,10 @@ export default function Navbar() {
     window.addEventListener("scroll", scrollActive);
     return () => window.removeEventListener("scroll", scrollActive);
   }, []);
-  const menuVariants = {
-    hidden: {
-      scale: 0,
-    },
-    visible: {
-      scale: 40,
-      transition: {
-        type: "tween",
-        duration: 0.5,
-      },
-    },
-  };
-  const navLinkVariants = {
-    hidden: {
-      display: "none",
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      y: -30,
-      transition: {
-        delay: 0.7,
-      },
-    },
-  };
+
   const isActive = (path: string) =>
     pathname === path ? "text-Orange" : "text-WhiteGray";
-  const socialClassNames = "text-3xl cursor-pointer text-White";
+
   return (
     <header
       className={`fixed left-0 top-0 z-20 w-full ${
@@ -86,44 +63,39 @@ export default function Navbar() {
         </div>
       </nav>
       <motion.div
-        variants={menuVariants}
-        initial="hidden"
-        animate={showMenu ? "visible" : "hidden"}
-        className="bg-Black fixed right-0 top-0 h-16 w-16 rounded-full"
+        className="bg-Black fixed right-0 top-0  rounded-full"
+        animate={{ scale: showMenu ? 40 : 0 }}
+        transition={{ type: "tween", duration: 0.5 }}
       ></motion.div>
-      <motion.nav
-        variants={navLinkVariants}
-        animate={showMenu ? "visible" : "hidden"}
-        className="flex h-screen flex-col justify-center md:hidden"
-      >
-        {navLinks.map((navLink) => (
-          <Link
-            key={navLink.label}
-            href={navLink.path}
-            className={`block px-3 py-2 text-5xl font-medium ${isActive(
-              navLink.path
-            )}`}
-            onClick={(prev) => setShowMenu(!prev)}
-          >
-            {navLink.label}
-          </Link>
-        ))}
-        <div className="fixed bottom-4 left-6 flex flex-col items-center gap-4">
-          <Link href="https://www.github.com">
-            <AiFillGithub className={socialClassNames} />
-          </Link>
-          <Link href="https://www.instagram.com">
-            <AiFillInstagram className={socialClassNames} />
-          </Link>
-          <Link href="https://www.twitter.com">
-            <AiFillTwitterCircle className={socialClassNames} />
-          </Link>
-        </div>
-        <HiX
-          className="text-White absolute right-8 top-20 h-6 w-6 cursor-pointer"
-          onClick={(prev) => setShowMenu(!prev)}
-        />
-      </motion.nav>
+      {showMenu && (
+        <motion.nav
+          // added bg-white class
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <div className="flex justify-between bg-white">
+            <div className="flex  flex-col   md:hidden">
+              {navLinks.map((navLink) => (
+                <Link
+                  key={navLink.label}
+                  href={navLink.path}
+                  className={`block px-3 py-2 text-xl font-medium ${isActive(
+                    navLink.path
+                  )}`}
+                  onClick={() => setShowMenu(false)}
+                >
+                  {navLink.label}
+                </Link>
+              ))}
+            </div>
+            <HiX
+              className="text-White absolute right-8 top-3 h-6 w-6 cursor-pointer"
+              onClick={() => setShowMenu(false)}
+            />
+          </div>
+        </motion.nav>
+      )}
     </header>
   );
 }

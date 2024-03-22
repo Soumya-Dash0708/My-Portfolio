@@ -15,17 +15,17 @@ export default function Portfolio() {
   return (
     <>
       <Head>
-        <title>Mozorozov | Portfolio</title>
+        <title>Soumya ranjan dash | Portfolio</title>
       </Head>
       <Wrapper pageIndex={3}>
         <div className="flex flex-col items-center pt-40 text-center">
-          <div className="text-sm font-semibold uppercase text-WhiteGray">
+          <div className="text-WhiteGray text-sm font-semibold uppercase">
             - Portfolio
           </div>
-          <div className="mt-8 text-3xl font-semibold uppercase text-White">
+          <div className="text-White mt-8 text-3xl font-semibold uppercase">
             My Masterpiece Collections
           </div>
-          <p className="mt-8 max-w-3xl text-sm leading-7 text-WhiteGray">
+          <p className="text-WhiteGray mt-8 max-w-3xl text-sm leading-7">
             I specialize in developing custom web applications that cater to
             diverse business needs, from e-commerce platforms to data
             visualization dashboards, using the latest technologies and agile
@@ -34,10 +34,10 @@ export default function Portfolio() {
           </p>
           <div className="my-8 grid gap-4 md:grid-cols-2 md:px-8 lg:grid-cols-3">
             {projects.map((project) => (
-              <div key={project.id} className="rounded-lg bg-Blur  p-4">
+              <div key={project.id} className="bg-Blur rounded-lg  p-4">
                 <div className="group  relative w-full">
                   <img src={project.img} alt="" />
-                  <div className="absolute left-0 top-0 z-10 flex h-full w-full scale-0 items-center justify-center gap-4 bg-Orange transition-all duration-300 group-hover:scale-100">
+                  <div className="bg-Orange absolute left-0 top-0 z-10 flex h-full w-full scale-0 items-center justify-center gap-4 transition-all duration-300 group-hover:scale-100">
                     <Link href="">
                       <AiFillGithub className="text-3xl transition-all duration-300 hover:scale-110" />
                     </Link>
@@ -46,12 +46,12 @@ export default function Portfolio() {
                     </Link>
                   </div>
                 </div>
-                <div className="mt-2 text-start text-White">{project.name}</div>
+                <div className="text-White mt-2 text-start">{project.name}</div>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {project.tools.map((tool) => (
                     <span
                       key={tool}
-                      className="rounded-full bg-Blur px-3 py-2 text-sm text-white"
+                      className="bg-Blur rounded-full px-3 py-2 text-sm text-white"
                     >
                       {tool}
                     </span>
@@ -67,13 +67,13 @@ export default function Portfolio() {
         <div className="flex flex-wrap justify-center gap-12" ref={ref}>
           {countUpItems.map((item) => (
             <div key={item.id} className="text-center">
-              <div className="text-3xl text-Orange">
+              <div className="text-Orange text-3xl">
                 {inView && (
                   <MyCountUp start={0} end={item.number} duration={3} />
                 )}
                 +
               </div>
-              <div className="mt-2 text-sm text-WhiteGray">{item.text}</div>
+              <div className="text-WhiteGray mt-2 text-sm">{item.text}</div>
             </div>
           ))}
         </div>
