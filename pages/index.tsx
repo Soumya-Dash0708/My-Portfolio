@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <Wrapper
         pageIndex={1}
-        className="flex w-full flex-col items-center justify-center gap-4 sm:flex-row sm:gap-64 md:w-full"
+        className="flex  flex-col items-center justify-center gap-4 sm:flex-row sm:gap-64 "
       >
         <LeftBanner />
         <RightBanner />
