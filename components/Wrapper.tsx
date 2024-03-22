@@ -14,7 +14,7 @@ export default function Wrapper({
   const socialClassNames = "text-3xl cursor-pointer text-White";
   return (
     <section className={className}>
-      <div className="bg-Blur fixed -z-10 h-[20rem] w-[25rem] rounded-full blur-3xl xs:h-[28rem] xs:w-[35rem] md:-left-10 md:-top-40 md:h-[50rem] md:w-[50rem]"></div>
+      <div className="bg-Blur fixed -z-10 h-[20rem] w-[20rem] rounded-full blur-3xl  xs:h-[28rem] xs:w-[28rem] md:-left-10 md:-top-40 md:h-[50rem] md:w-[50rem]"></div>
       <>{children}</>
       {/* 
       <div className="fixed bottom-12 left-6 hidden flex-col items-center gap-4 md:flex">
