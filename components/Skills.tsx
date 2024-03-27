@@ -34,26 +34,34 @@ export default function Skills({ skills }: SkillBarProps) {
       );
     }, 100);
     return () => {
-        clearInterval(intervalId)
-    }
+      clearInterval(intervalId);
+    };
   }, [progress]);
   return (
     <div>
-      <div className="text-WhiteGray font-semibold uppercase text-sm text-center">
+      <div className="text-WhiteGray text-center text-sm font-semibold uppercase">
         - Skills
       </div>
-      <div className="font-semibold text-3xl mt-4 text-center text-White">
+      <div className="text-White mt-4 text-center text-3xl font-semibold">
         What I Expert
       </div>
-      <div ref={ref} className="grid md:grid-cols-2 gap-4 p-10">
+      <div ref={ref} className="grid gap-4 p-10 md:grid-cols-2">
         {skills.map((skill, index) => (
           <div key={skill.name} className="mb-4">
-            <div className="flex justify-between items-center mb-2">
-              <span className="text-White">{skill.name}</span>
-              <span className="font-bold text-WhiteGray text-sm">{animatedProgress[index]}%</span>
+            <div className="mb-2 flex items-center justify-between">
+              <span>{skill.name}</span>
+              <span className="text-sm font-bold text-gray-500">
+                {animatedProgress[index]}%
+              </span>
             </div>
-            <div className="relative w-full h-2 bg-WhiteGray rounded-full overflow-hidden">
-                <div className="absolute top-0 left-0 h-full bg-Orange rounded-full" style={{width: `${visible ? animatedProgress[index] : 0}%`, transition: "width 1s"}}></div>
+            <div className="relative h-2 w-full overflow-hidden rounded-full bg-orange-200">
+              <div
+                className="absolute left-0 top-0 h-full rounded-full bg-orange-400"
+                style={{
+                  width: `${visible ? animatedProgress[index] : 0}%`,
+                  transition: "width 1s",
+                }}
+              ></div>
             </div>
           </div>
         ))}

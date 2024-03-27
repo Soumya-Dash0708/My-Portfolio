@@ -13,20 +13,19 @@ export default function about() {
       <Wrapper pageIndex={2}>
         <div className="mb-12 flex min-h-screen flex-col items-center justify-center gap-12 pt-28 lg:mb-0 lg:flex-row lg:pt-0">
           <Image
-            src={"/about.jpg"}
+            src={"/Soumya.JPG"}
             width={300}
             height={300}
             alt={"about image"}
           />
           <div className="max-w-md md:max-w-xl lg:ml-8 lg:w-1/2">
-            <div className="text-WhiteGray text-sm font-semibold uppercase">
+            <div className="text-sm font-semibold uppercase text-primary">
               - Introduction
             </div>
             <div className="text-White mt-8 text-3xl font-semibold uppercase">
-              UI/UX Designer & FrontEnd Developer, based on California
+              FrontEnd Developer, based on India
             </div>
-            <p className="text-WhiteGray mt-8 text-sm leading-7">
-              {" "}
+            <p className="mt-8 text-sm leading-7 text-gray-500">
               I am a passionate frontend developer with a creative eye for
               design and a strong focus on delivering elegant and intuitive
               interfaces. Excited to collaborate on new projects!
@@ -34,14 +33,14 @@ export default function about() {
             <div className="mt-8 flex gap-8">
               <Link
                 href="/contact"
-                className="text-Orange text-sm font-semibold uppercase hover:underline"
+                className="text-sm font-semibold uppercase text-primary hover:underline"
               >
                 Contact Me
               </Link>
               <a
-                href="/pdf/resume.pdf"
+                href="/pdf/profile.pdf"
                 download
-                className="text-Orange text-sm font-semibold uppercase hover:underline"
+                className="text-sm font-semibold uppercase text-primary hover:underline"
               >
                 Resume
               </a>

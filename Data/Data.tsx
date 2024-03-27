@@ -74,17 +74,17 @@ const projects: ProjectProps[] = [
 
 const skills = [
   { name: "HTML", level: 80 },
-  { name: "CSS", level: 70 },
-  { name: "JavaScript", level: 75 },
-  { name: "TypeScript", level: 60 },
   { name: "ReactJS", level: 75 },
   { name: "NextJS", level: 65 },
+  { name: "TypeScript", level: 60 },
+  { name: "JavaScript", level: 75 },
+  { name: "Tailwind CSS", level: 70 },
 ];
 
 const contacts: ContactsProps[] = [
-  { id: 1, title: "Address", text: "AungThaPyay 2 Road, TharKayTa,Yangon" },
-  { id: 2, title: "Phone", text: "+959-883-271-929" },
-  { id: 3, title: "Email", text: "yelinko.2002@gmail.com" },
+  { id: 1, title: "Address", text: "Bhubaneswar,Odisha,India" },
+  { id: 2, title: "Phone", text: "+91 6371754107" },
+  { id: 3, title: "Email", text: "soumyaranjandash0708@gmail.com" },
 ];
 
-export {navLinks, projects, countUpItems, services, skills, contacts };
+export { navLinks, projects, countUpItems, services, skills, contacts };
