@@ -23,3 +23,20 @@
 .TextShadow:hover {
   text-shadow: 0 0 20px #eeb844, 0 0 20px #eeb844, 0 0 20px #eeb844;
 }
+
+.image-container {
+  text-align: center;
+}
+
+.image {
+  max-width: 70%;
+  /* Decrease the image size */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.gradient-container {
+  position: relative;
+  z-index: 1;
+}

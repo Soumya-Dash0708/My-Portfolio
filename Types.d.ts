@@ -45,6 +45,14 @@ type ContactsProps = {
   text: string;
 };
 
+type CardProps = {
+  id: number;
+  img: string;
+  service: string;
+  desc: string;
+  gradientColor: any;
+};
+
 export {
   WrapperProps,
   CountUpProps,
@@ -54,4 +62,5 @@ export {
   ProjectProps,
   ServiceProps,
   ContactsProps,
+  CardProps,
 };

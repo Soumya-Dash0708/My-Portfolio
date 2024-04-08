@@ -4,6 +4,7 @@ import {
   NavLink,
   ProjectProps,
   ServiceProps,
+  CardProps,
 } from "@/Types";
 import { BsVectorPen, BsCode } from "react-icons/bs";
 import { FiBarChart } from "react-icons/fi";
@@ -25,22 +26,22 @@ const services: ServiceProps[] = [
 const countUpItems: countUpItemsProps[] = [
   {
     id: 1,
-    number: 9,
+    number: 4,
     text: "Years of Experience",
   },
   {
     id: 2,
-    number: 178,
+    number: 22,
     text: "Satisfied Customers",
   },
   {
     id: 3,
-    number: 742,
+    number: 12,
     text: "Design Items",
   },
   {
     id: 4,
-    number: 112,
+    number: 32,
     text: "Clients Served",
   },
 ];
@@ -48,26 +49,26 @@ const countUpItems: countUpItemsProps[] = [
 const projects: ProjectProps[] = [
   {
     id: 1,
-    img: "/project1.png",
-    name: "Random Password Generator",
+    img: "/univer.png",
+    name: "Educational Website",
     tools: ["React", "Typescript", "Tailwind CSS"],
   },
   {
     id: 2,
-    img: "/project2.jpg",
+    img: "/e-commerce.png",
     name: "React E-commerce Website",
-    tools: ["React", "Tailwind CSS"],
+    tools: ["React", "Typescript", "Tailwind CSS"],
   },
   {
     id: 3,
-    img: "/project3.jpg",
-    name: "Shopping Cart",
-    tools: ["React", "Redux-Toolkit", "Tailwind CSS"],
+    img: "/winwadi.png",
+    name: "Affiliate marketing Website",
+    tools: ["React", "Typescript", "Tailwind CSS"],
   },
   {
     id: 4,
-    img: "/project4.jpg",
-    name: "Autocomplete SearchBar",
+    img: "/realestate.png",
+    name: "Real-Estate Website",
     tools: ["React", "Typescript", "Tailwind CSS"],
   },
 ];
@@ -81,10 +82,54 @@ const skills = [
   { name: "Tailwind CSS", level: 70 },
 ];
 
+const servicecards: CardProps[] = [
+  {
+    id: 1,
+    img: "/eng.png",
+    service: "Engineering",
+    desc: "21",
+
+    gradientColor: "bg-gradient-to-tl from-indigo-300 to-purple-500",
+  },
+  {
+    id: 2,
+    img: "/analytics.png",
+    service: "Business",
+    desc: "12",
+
+    gradientColor: "bg-gradient-to-tl from-red-200 to-red-500",
+  },
+  {
+    id: 3,
+    img: "/healthcare.png",
+    service: "Medicine",
+    desc: "5",
+
+    gradientColor: "bg-gradient-to-tl from-cyan-300 to-cyan-500",
+  },
+
+  {
+    id: 4,
+    img: "/social-science.png",
+    service: "Social Science",
+    desc: "9",
+
+    gradientColor: "bg-gradient-to-tl from-pink-300 to-pink-500",
+  },
+];
+
 const contacts: ContactsProps[] = [
   { id: 1, title: "Address", text: "Bhubaneswar,Odisha,India" },
   { id: 2, title: "Phone", text: "+91 6371754107" },
   { id: 3, title: "Email", text: "soumyaranjandash0708@gmail.com" },
 ];
 
-export { navLinks, projects, countUpItems, services, skills, contacts };
+export {
+  navLinks,
+  projects,
+  countUpItems,
+  services,
+  skills,
+  contacts,
+  servicecards,
+};

@@ -35,23 +35,30 @@ export default function Portfolio() {
           <div className="my-8 grid gap-4 md:grid-cols-2 md:px-8 lg:grid-cols-3">
             {projects.map((project) => (
               <div key={project.id} className="bg-Blur rounded-lg  p-4">
-                <div className="group  relative w-full">
-                  <img src={project.img} alt="" />
-                  <div className="bg-Orange absolute left-0 top-0 z-10 flex h-full w-full scale-0 items-center justify-center gap-4 transition-all duration-300 group-hover:scale-100">
+                <div className="group relative w-full shadow-md">
+                  <img
+                    src={project.img}
+                    alt=""
+                    className=" h-48 w-full  border object-contain" // Adjust width and height as needed
+                  />
+                  <div className="absolute left-0 top-0 z-10 flex h-full w-full scale-0 items-center justify-center gap-4 bg-orange-400 transition-all duration-300 group-hover:scale-100">
                     <Link href="">
-                      <AiFillGithub className="text-3xl transition-all duration-300 hover:scale-110" />
+                      <AiFillGithub className="text-3xl text-white transition-all duration-300 hover:scale-110" />
                     </Link>
                     <Link href="">
-                      <AiFillEye className="text-3xl transition-all duration-300 hover:scale-110" />
+                      <AiFillEye className="text-3xl text-white transition-all duration-300 hover:scale-110" />
                     </Link>
                   </div>
                 </div>
-                <div className="text-White mt-2 text-start">{project.name}</div>
+
+                <div className=" mt-2 text-start font-semibold text-primary">
+                  {project.name}
+                </div>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {project.tools.map((tool) => (
                     <span
                       key={tool}
-                      className="bg-Blur rounded-full px-3 py-2 text-sm text-white"
+                      className="bg-Blur rounded-full px-3 py-2 text-sm "
                     >
                       {tool}
                     </span>
